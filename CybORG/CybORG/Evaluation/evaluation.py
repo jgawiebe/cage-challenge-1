@@ -13,12 +13,15 @@ from CybORG.Agents.Wrappers.FixedFlatWrapper import FixedFlatWrapper
 from CybORG.Agents.Wrappers.OpenAIGymWrapper import OpenAIGymWrapper
 from CybORG.Agents.Wrappers.ReduceActionSpaceWrapper import ReduceActionSpaceWrapper
 from CybORG.Agents.Wrappers import ChallengeWrapper
+from stable_baselines3 import PPO, A2C, DQN, HER, DDPG, SAC, TD3
 
 MAX_EPS = 10
 agent_name = 'Blue'
 
-def wrap(env):
-    return OpenAIGymWrapper(agent_name, EnumActionWrapper(FixedFlatWrapper(ReduceActionSpaceWrapper(env))))
+def wrap( env):
+    return ChallengeWrapper('Blue', env)
+# def wrap(env):
+#     return OpenAIGymWrapper(agent_name, EnumActionWrapper(FixedFlatWrapper(ReduceActionSpaceWrapper(env))))
 
 
 if __name__ == "__main__":
@@ -35,7 +38,8 @@ if __name__ == "__main__":
     wrap_line = lines.split('\n')[1].split('return ')[1]
 
     # Change this line to load your agent
-    agent = BlueLoadAgent()
+    # agent = BlueLoadAgent()
+    agent = PPO.load("PPO against B_lineAgent for 0.0 million eps - obs space (52,)")
 
     print(f'Using agent {agent.__class__.__name__}, if this is incorrect please update the code to load in your agent')
 
@@ -68,7 +72,8 @@ if __name__ == "__main__":
                 a = []
                 # cyborg.env.env.tracker.render()
                 for j in range(num_steps):
-                    action = agent.get_action(observation, action_space)
+                    # action = agent.get_action(observation, action_space)
+                    action, _states = agent.predict(observation)
                     observation, rew, done, info = wrapped_cyborg.step(action)
                     # result = cyborg.step(agent_name, action)
                     r.append(rew)
