@@ -17,7 +17,6 @@ from CybORG import CybORG
 from CybORG.Agents import B_lineAgent, SleepAgent
 from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
 from CybORG.Agents.SimpleAgents.RLAgent import RLAgent
-# from CybORG.Agents.SimpleAgents.HybridAgent import HybridAgent
 from CybORG.Agents.SimpleAgents.BlueLoadAgent import BlueLoadAgent
 from CybORG.Agents.SimpleAgents.BlueReactAgent import BlueReactRemoveAgent
 from CybORG.Agents.SimpleAgents.Meander import RedMeanderAgent
@@ -48,10 +47,9 @@ if __name__ == "__main__":
 
     red_agents = [B_lineAgent]
 
-    RL_algos = ["PPO"]
+    RL_algos = ["PPO", "A2C", "DQN"]
 
-    timesteps = 1000
-
+    timesteps = 200000
 
     steps = round(timesteps/1000000, 2)
 
@@ -64,7 +62,7 @@ if __name__ == "__main__":
 
             model = RLAgent(env=env, agent_type = RL_algo)
 
-            model.train(timesteps=int(timesteps), log_name = f"{RL_algo} against red {red_agent.__name__} for {steps} million training eps")
+            model.train(timesteps=int(timesteps), log_name = f"{RL_algo}")
 
-            model.save(f"{RL_algo} against {red_agent.__name__} for {steps} million eps - obs space (52,)")
+            model.save(f"{RL_algo} against {red_agent.__name__}")
         
