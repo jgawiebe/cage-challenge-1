@@ -11,7 +11,7 @@ from stable_baselines3.common.results_plotter import load_results, ts2xy, plot_r
 from stable_baselines3.common.noise import NormalActionNoise
 
 from CybORG import CybORG
-from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
+from CybORG.Agents.BaseAgent import BaseAgent
 
 class RLAgent(BaseAgent):
 

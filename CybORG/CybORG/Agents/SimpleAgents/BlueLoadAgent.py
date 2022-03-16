@@ -3,7 +3,7 @@ import inspect
 from stable_baselines3 import PPO
 
 from CybORG import CybORG
-from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
+from CybORG.Agents.BaseAgent import BaseAgent
 from CybORG.Agents.Wrappers.EnumActionWrapper import EnumActionWrapper
 from CybORG.Agents.Wrappers.FixedFlatWrapper import FixedFlatWrapper
 from CybORG.Agents.Wrappers.OpenAIGymWrapper import OpenAIGymWrapper
