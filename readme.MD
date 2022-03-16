@@ -1,15 +1,12 @@
 # TTCP CAGE Challenge 1
 ![Banner](/images/TTCP-Logo-small.png) ![Banner](/images/CAGE-Logo-small.png)
 
-# Leader Board (final)
+# Recorded Results
 
-We are pleased to announce the final results of the TTCP CAGE Challenge 1 in the table below\.  We received seven submissions in total, with three being improvements upon previous submissions (and not listed below)\. 
-
-<table>
+<table style="width: 100%">
     <thead>
         <tr>
-            <th colspan="5" rowspan="2"></th>
-            <th colspan="9">Validated Test Scores</th>
+            <th colspan="1" rowspan="3"></th>
         </tr>
         <tr>
             <th colspan="3">30 steps</th>
@@ -17,11 +14,6 @@ We are pleased to announce the final results of the TTCP CAGE Challenge 1 in the
             <th colspan="3">100 steps</th>
         </tr>
         <tr>
-            <th>Ranking</th>
-            <th>Team Name</th>
-            <th>Method</th>
-            <th>CybORG Version</th>
-            <th>Total Score</th>
             <th>B-line</th>
             <th>Meander</th>
             <th>Sleep</th>
@@ -35,75 +27,35 @@ We are pleased to announce the final results of the TTCP CAGE Challenge 1 in the
     </thead>
     <tbody>
         <tr>
-            <td>1</td>
-            <td>Mindrake</td>
-            <td>Hierarchical PPO with Curiosity</td>
-            <td>v1.2</td>
-            <td>-30.07 ± 0.67</td>
-            <td>-2.63</td>
-            <td>-2.28</td>
-            <td>0</td>
-            <td>-4.71</td>
-            <td>-3.60</td>
-            <td>0</td>
-            <td>-11.01</td>
-            <td>-5.84</td>
-            <td>0</td>
+            <th>Vanilla PPO</th>
         </tr>
         <tr>
-            <td>2</td>
-            <td>Raytheon SRG</td>
-            <td>Hierarchical PPO</td>
-            <td>v1.2</td>
-            <td>-49.35 ± 0.37</td>
-            <td>-3.87</td>
-            <td>-3.27</td>
-            <td>0</td>
-            <td>-6.81</td>
-            <td>-6.66</td>
-            <td>0</td>
-            <td>-14.06</td>
-            <td>-14.68</td>
-            <td>0</td>
+            <td>10 episodes</td>
+            <td>-8.71 ± 2.69</td>
+            <td>-9,41 ± 4.20</td>
+            <td>-0.5 ± 0.53</td>
+            <td>-12.33 ± 3.87</td>
+            <td>-33.98 ± 12.74</td>
+            <td>-0.7 ± 0.82</td>
+            <td>-40.27 ± 42.33</td>
+            <td>-122.07 ± 38.79</td>
+            <td>-0.9 ± 0.99</td>
         </tr>
         <tr>
-            <td>3</td>
-            <td>CUABv2</td>
-            <td>DDQN with a RNN</td>
-            <td>v1.2</td>
-            <td>-119.01 ± 2.29</td>
-            <td>-6.87</td>
-            <td>-6.00</td>
-            <td>0</td>
-            <td>-12.67</td>
-            <td>-16.87</td>
-            <td>0</td>
-            <td>-27.47</td>
-            <td>-49.13</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>CUABv1</td>
-            <td>DDQN</td>
-            <td>v1.2</td>
-            <td>-213.76 ± 6.45</td>
-            <td>-8.10</td>
-            <td>-9.39</td>
-            <td>0</td>
-            <td>-19.22</td>
-            <td>-30.62</td>
-            <td>0</td>
-            <td>-59.66</td>
-            <td>-86.77</td>
-            <td>0</td>
+            <td>1000 episodes</td>
+            <td>-8.88 ± 5.46</td>
+            <td>-11.09 ± 5.42</td>
+            <td>-0.34 ± 0.59</td>
+            <td>-15.21 ± 11.07</td>
+            <td>-34.15 ± 14.75</td>
+            <td>-0.52 ± 0.73</td>
+            <td>-31.76 ± 25.05</td>
+            <td>-110.54 ± 44.33</td>
+            <td>-1.03 ± 2.7</td>
         </tr>
     </tbody>
 </table>
 
-We would like to thank all those who participated in our first challenge\.  We will be giving a presentation on the results of the first challenge on 1<sup>st</sup> March at the AAAI-22 Workshop on Artificial Intelligence for Cyber Security (AICS) https://aaai.org/Conferences/AAAI-22/ws22workshops/#ws09. TTCP CAGE Challenge 2 will be launched later in March 2022.
-
-Please note that the CUABv1 submission was developed in CybORG v1.1 (which didn’t include the Misinform extension) and the result listed in the table is validated in CybORG v1.2\.  CUABv1 achieved a total score of -55.65 ± 1.35 in CybORG v1.1\. The validated total scores are the result of summing the average scores of 1000 episodes for each combination of trial length and red agent with random.seed(117), with 95% confidence intervals calculated and shown.
 
 # Introduction
 
