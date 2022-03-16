@@ -15,7 +15,7 @@ from stable_baselines3.common.evaluation import evaluate_policy
 
 from CybORG import CybORG
 from CybORG.Agents import B_lineAgent, SleepAgent
-from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
+from CybORG.Agents.BaseAgent import BaseAgent
 from CybORG.Agents.SimpleAgents.RLAgent import RLAgent
 from CybORG.Agents.SimpleAgents.BlueLoadAgent import BlueLoadAgent
 from CybORG.Agents.SimpleAgents.BlueReactAgent import BlueReactRemoveAgent
@@ -47,9 +47,9 @@ if __name__ == "__main__":
 
     red_agents = [B_lineAgent]
 
-    RL_algos = ["PPO", "A2C", "DQN"]
+    RL_algos = ["DQN"]
 
-    timesteps = 200000
+    timesteps = 100000
 
     steps = round(timesteps/1000000, 2)
 

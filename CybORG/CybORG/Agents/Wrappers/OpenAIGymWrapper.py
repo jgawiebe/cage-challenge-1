@@ -3,7 +3,7 @@ from gym import spaces, Env
 from typing import Union, List
 from prettytable import PrettyTable
 
-from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
+from CybORG.Agents.BaseAgent import BaseAgent
 from CybORG.Agents.Wrappers.BaseWrapper import BaseWrapper
 
 

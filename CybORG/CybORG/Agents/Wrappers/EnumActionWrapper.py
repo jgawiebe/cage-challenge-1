@@ -2,7 +2,7 @@ import copy
 import inspect, pprint
 from typing import Union
 
-from CybORG.Agents.SimpleAgents import BaseAgent
+from CybORG.Agents import BaseAgent
 from CybORG.Agents.Wrappers import BaseWrapper
 from CybORG.Shared import Results
 

@@ -1,7 +1,7 @@
 from typing import Union, Any
 
 from CybORG import CybORG
-from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
+from CybORG.Agents.BaseAgent import BaseAgent
 from CybORG.Shared import Results
 
 
