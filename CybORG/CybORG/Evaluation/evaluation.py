@@ -15,7 +15,7 @@ from CybORG.Agents.Wrappers.ReduceActionSpaceWrapper import ReduceActionSpaceWra
 from CybORG.Agents.Wrappers import ChallengeWrapper
 from stable_baselines3 import PPO, A2C, DQN, HER, DDPG, SAC, TD3
 
-MAX_EPS = 10
+MAX_EPS = 1000
 agent_name = 'Blue'
 
 def wrap( env):
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     # Change this line to load your agent
     # agent = BlueLoadAgent()
-    agent = PPO.load("PPO against B_lineAgent for 0.0 million eps - obs space (52,)")
+    agent = PPO.load("PPO against B_lineAgent")
 
     print(f'Using agent {agent.__class__.__name__}, if this is incorrect please update the code to load in your agent')
 
