@@ -3,7 +3,7 @@
 
 # Recorded Results
 
-<table style="width: 100%">
+<table style="width: 150%">
     <thead>
         <tr>
             <th colspan="1" rowspan="3"></th>
